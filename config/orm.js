@@ -45,8 +45,8 @@ var orm = {
   },
   updateOne: function(tableInput, cols, condition, cb) {
     var qry = "UPDATE " + tableInput;
-    var qry = qry + "SET " + objToSql(cols);
-    var qry = qry + "WHERE " + condition;
+    var qry = qry + " SET " + objToSql(cols);
+    var qry = qry + " WHERE " + condition;
     console.log(qry);
 
     connection.query(qry, function(err,data) {
