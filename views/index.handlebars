@@ -1,22 +1,35 @@
-<h1>Eat da Burgers!!!</h1>
+<h1>Any Time is Burger Time!!!</h1>
+{{!-- <img aria-label="hamburger" src="/assets/img/5d084bb0c74de107781800.gif"> --}}
+{{!-- <img aria-label="hamburger" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/emojione/178/hamburger_1f354.png"/> --}}
+<div class="container main col-md-6">
+  <div class="form-panel">
+    <form class="create-form ">
+      <div class="form-group ">
+        <label for="burger">Gimme a </label>
+        <input type="text" id="burger_name" name="burger_name" placeholder="...create your own Burger...">
+          <button class="btn btn-dark" type="submit">&#127828; Add it</button>
+      </div>
 
-<div class="container">
+    </form>
+</div>
   <div class="row">
-    <div class="col" style="background-color:#f88d35;">
-      <h2>Burgers to Eat</h2>
-      <ul>
+    <div class="col col-md-4" >
+      <h2 content: "\01F354">Ready to Eat</h2>
+      
+      <ul> 
+        <h6>Devour it!</h6>
         {{#each burgers}}
         {{#unless devoured}}
         <li>
+          <button class="devour" data-id="{{id}}">😋</button>
           {{burger_name}}
-          <button class="devour" data-id="{{id}}">
-            Eat it up YUM
-          </button>
         </li> {{/unless}}
         {{/each}}
       </ul>
     </div>
-    <div class="col" style="background-color:#f88d35;">
+    <div class="colcenter col-md-4"><img class="burgerImg" aria-label="hamburger" src="/assets/img/5d084bb0c74de107781800.gif">
+    </div>
+    <div class="col col-md-4" >
 
       <h2>Devoured</h2>
       <ul>
@@ -31,17 +44,5 @@
     </div>
   </div>
 
-  <h2>Add a Burger</h2>
-  <form class="create-form">
-    <div class="form-group">
-      <label for="burger">Name your Burger: </label>
-      <input type="text" id="burger_name" name="burger_name" placeholder="Name your Burger">
-    </div>
-    <div class="form-group">
-
-      <button class="btn btn-primary" type="submit">Add it</button>
-    </div>
-
-  </form>
 
 </div>

@@ -1,10 +1,56 @@
-.column {
-  float: left;
-  width: 50%;
-  padding: 10px;
+body {
+  margin-top: 25px;
+  /* background-color: #EDDED4; */
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  background-image: url("../img/sesame.png");
+  background-repeat: repeat;
 }
-.row:after{
-  content: "";
-  display: table;
-  clear: both;
+h1 {text-align: center}
+.main {
+  margin-top: 25px;
+  padding-left: 0px;
+  padding-right: 0px;
+  border: 5px solid red;
+-webkit-box-shadow: 8px 7px 12px 15px rgba(0, 0, 0, 0.63);
+box-shadow: 8px 7px 12px 1px rgba(0, 0, 0, 0.63);
+}
+.form-panel {
+  font-size: 35px;
+  background-color: #FFF8DC;
+  width: 100%;
+}
+#burger_name {
+  font-size: 25px;
+}
+.create-form {
+  padding: 20px;
+  align-content: center;
+
+}
+.form-group { margin: 0px;}
+.devour {
+    line-height: 16px;
+    padding-top: 4px;
+    padding-bottom: 8px;
+    border-radius: 50%;
+  }
+.col{
+ padding: 10px;
+ font-size: large;
+ background-color:#f88d35;
+ width: 40%;
+}
+.colcenter {
+  width: 100%;
+   background-color:#f88d35;
+
+}
+.row{
+  margin-left: 0px;
+  margin-right: 0px;
+
+}
+.burgerImg {
+  padding: 10px;
+  width: 100%;
 }

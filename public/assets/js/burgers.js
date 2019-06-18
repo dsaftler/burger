@@ -16,20 +16,25 @@ $(function() {
     
   $(".create-form").on("submit", function(event){
       console.log("Hit newBurger");
-      
       event.preventDefault();
-      var newBurger = {
-        burger_name: $("#burger_name").val().trim(),
-        devoured: false
-      }
-      $.ajax("/api/burgers", {
-        type: "POST",
-        data: newBurger
-      }).then(
-        function() {
-          console.log("created new Burger");
-          location.reload();
+      if ($("#burger_name").val().trim()) {
+        var newBurger = {
+          burger_name: $("#burger_name").val().trim(),
+          devoured: false
         }
-      );
+      console.log("burger_name: " + burger_name);
+        
+        $.ajax("/api/burgers", {
+          type: "POST",
+          data: newBurger
+        }).then(
+          function() {
+            console.log("created new Burger");
+            location.reload();
+          }
+        );
+      } else {
+        alert("Sorry... you have to name your burger to order it...")
+      }
     });
 });
