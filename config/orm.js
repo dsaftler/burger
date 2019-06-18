@@ -33,7 +33,7 @@ var orm = {
     var qry = "INSERT INTO " + tableInput ;
     qry = qry + " (" + cols.toString() + ") ";
     qry = qry + "VALUES (" + printQs(vals.length)+ ")" ;
-    console.log(qry);
+    // console.log(qry);
 
     connection.query(qry, vals, function(err, data){
       if (err) {
@@ -47,7 +47,7 @@ var orm = {
     var qry = "UPDATE " + tableInput;
     var qry = qry + " SET " + objToSql(cols);
     var qry = qry + " WHERE " + condition;
-    console.log(qry);
+    // console.log(qry);
 
     connection.query(qry, function(err,data) {
       if (err) {

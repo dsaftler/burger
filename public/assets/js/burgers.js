@@ -8,7 +8,7 @@ $(function() {
       type: "PUT"
     }).then(
       function() {
-        console.log("devoured");
+        // console.log("devoured");
         location.reload();
       }
       );
@@ -22,19 +22,19 @@ $(function() {
           burger_name: $("#burger_name").val().trim(),
           devoured: false
         }
-      console.log("burger_name: " + burger_name);
+      // console.log("burger_name: " + burger_name);
         
         $.ajax("/api/burgers", {
           type: "POST",
           data: newBurger
         }).then(
           function() {
-            console.log("created new Burger");
+            // console.log("created new Burger");
             location.reload();
           }
         );
       } else {
-        alert("Sorry... you have to name your burger to order it...")
+        alert("Sorry... you have to name your burger to add it...")
       }
     });
 });

@@ -7,7 +7,7 @@ router.get("/", function (req, res) {
     var hBarsObj = {
       burgers: data
     };
-    console.log(hBarsObj);
+    // console.log(hBarsObj);
     res.render("index", hBarsObj)
 
   })
@@ -21,7 +21,7 @@ router.post("/api/burgers", function(req, res) {
 
 router.put("/api/burgers/:id", function(req, res) {
   var condition = "id = " + req.params.id;
-  console.log("condition: "+ condition);
+  // console.log("condition: "+ condition);
   burger.updateOne({ devoured: 1}, condition, function(result) {
     if (result.changedRows === 0) {
       return res.status(404).end();

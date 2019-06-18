@@ -7,29 +7,31 @@
       <div class="form-group ">
         <label for="burger">Gimme a </label>
         <input type="text" id="burger_name" name="burger_name" placeholder="...create your own Burger...">
-          <button class="btn btn-dark" type="submit">&#127828; Add it</button>
+        <button class="btn btn-dark" type="submit">&#127828; Add it</button>
       </div>
 
     </form>
-</div>
+  </div>
   <div class="row">
-    <div class="col col-md-4" >
-      <h2 content: "\01F354">Ready to Eat</h2>
-      
-      <ul> 
+    <div class="col col-md-4">
+      <h2>Ready to Eat</h2>
+
+      <ul>
         <h6>Devour it!</h6>
         {{#each burgers}}
         {{#unless devoured}}
         <li>
-          <button class="devour" data-id="{{id}}">😋</button>
+          {{> burgers/burger-block}}
           {{burger_name}}
-        </li> {{/unless}}
+        </li>
+        {{/unless}}
         {{/each}}
       </ul>
     </div>
-    <div class="colcenter col-md-4"><img class="burgerImg" aria-label="hamburger" src="/assets/img/5d084bb0c74de107781800.gif">
+    <div class="colcenter col-md-4"><img class="burgerImg" aria-label="hamburger"
+        src="/assets/img/5d084bb0c74de107781800.gif">
     </div>
-    <div class="col col-md-4" >
+    <div class="col col-md-4">
 
       <h2>Devoured</h2>
       <ul>
