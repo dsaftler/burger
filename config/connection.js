@@ -10,8 +10,7 @@ if ((process.env.PORT || 8080) != 8080) {
     user: "uxcfljx1hsoovz9a",
     password: "j413rbj4z782az40",
     database: "ba3fb2erltrvc4ec"
-  };
-}
+  }
 } else {
   connection =mysql.createConnection({
   host: "localhost",
