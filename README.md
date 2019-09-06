@@ -3,8 +3,6 @@
 ### Overview
 This is a Node, Express, MySQL, ORM, Handebars project that emphasizes the MVC structure for separations of concerns, and presents a SPA (Single Page Application) 
 
-It is deployed on Heroku
-
 All Console.log statements have been commented out except for connection & host confirmation.
 ---
 ### How it Works
@@ -17,6 +15,9 @@ This version is completely functional, albeit limited in scope - for instance:
 - burgers can not be 'restored' to available
 - burger names can't be changed once submitted
 - burgers can't be deleted
+
+### Heroku Link
+https://sheltered-refuge-31886.herokuapp.com/
 
 ### References:
 Burger gif: www.gipjy.com
